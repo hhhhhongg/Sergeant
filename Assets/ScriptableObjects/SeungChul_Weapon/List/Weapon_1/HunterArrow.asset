@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b24bedf2a67c64fb2684492d3da7fe, type: 3}
+  m_Name: HunterArrow
+  m_EditorClassIdentifier: 
+  id: 2
+  itemName: "\uC0AC\uB0E5\uAFBC\uC758 \uD65C"
+  itemtype: 1
+  itemgrade: 0
+  itemImage: {fileID: 1392263336, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  atk: 7
+  hp: 0
+  def: 0
+  spd: 0
+  explan: "\uC804\uBB38\uC801\uC778 \uC0AC\uB0E5\uC744 \uC704\uD55C \uD65C, \uB2E4\uC18C
+    \uBB34\uAC81\uAE30\uB294 \uD558\uC9C0\uB9CC \uC0AC\uB0E5\uC5D0\uB294 \uD655\uC2E4\uD558\uB2E4."

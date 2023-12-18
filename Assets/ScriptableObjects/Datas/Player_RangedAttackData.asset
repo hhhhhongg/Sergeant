@@ -16,6 +16,7 @@ MonoBehaviour:
   delay: 0.15
   power: 2
   speed: 10
+  dashSpeed: 100
   target:
     serializedVersion: 2
     m_Bits: 64

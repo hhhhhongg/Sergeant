@@ -7,6 +7,7 @@ public class TopDownCharactreController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
+    public event Action OnDashEvent;
     public event Action<AttackSO> OnAttackEvent;
 
     private float _timeSinceLastAttack = float.MaxValue;
@@ -47,12 +48,19 @@ public class TopDownCharactreController : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
+    public void CallDashEvent()
+    {
+        OnDashEvent?.Invoke();
+    }
 
     public void CallAttackEvent(AttackSO attackSO) 
     {
         OnAttackEvent?.Invoke(attackSO);
 
     }
+
+
+
 }
 
 ////[SerializeField] private float speed = 5f;

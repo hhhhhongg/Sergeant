@@ -57,7 +57,7 @@ public class NpcPatrolController : MonoBehaviour
 
     public void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("12");
+        //Debug.Log("12");
         moveSpot = transform.position;
     }
 }

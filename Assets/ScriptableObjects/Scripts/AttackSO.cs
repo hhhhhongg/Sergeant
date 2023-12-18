@@ -10,6 +10,7 @@ public class AttackSO : ScriptableObject
     public float delay;
     public float power;
     public float speed;
+    public float dashSpeed;
     public LayerMask target;
 
     [Header("Knock Back Info")]

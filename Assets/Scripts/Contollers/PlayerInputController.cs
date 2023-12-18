@@ -37,4 +37,10 @@ public class PlayerInputController : TopDownCharactreController
     {
         IsAttacking = value.isPressed;
     }
+
+    public void OnDash()
+    {
+        CallDashEvent();
+    }
+
 }

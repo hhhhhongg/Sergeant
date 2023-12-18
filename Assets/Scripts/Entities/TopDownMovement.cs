@@ -15,6 +15,8 @@ public class TopDownMovement : MonoBehaviour
     private float knockBackDuration = 0f;
 
     bool _isDash = false;
+    float Dashreload = 1f;
+    float DashTime = 1f;
 
     private void Awake() 
     {
@@ -37,6 +39,7 @@ public class TopDownMovement : MonoBehaviour
         {
             knockBackDuration -= Time.fixedDeltaTime;
         }
+        DashTime += Time.fixedDeltaTime;
     }
 
     public void ApplyKnockback(Transform other, float power, float duration)
@@ -56,7 +59,12 @@ public class TopDownMovement : MonoBehaviour
     }
     private void Dash()
     {
-        StartCoroutine(DashCoroutine());
+        if(DashTime >= Dashreload)
+        {
+            StartCoroutine(DashCoroutine());
+            DashTime = 0f;
+        }
+        
     }
     private void ApplyMovment(Vector2 direction)
     {
@@ -72,7 +80,6 @@ public class TopDownMovement : MonoBehaviour
     IEnumerator DashCoroutine()
     {
         _isDash = true;
-        Debug.Log(_stats.CurrentStats.dashSpeed);
         _rigidbody.AddForce(_aimDirection * _stats.CurrentStats.dashSpeed, ForceMode2D.Impulse);
         yield return new WaitUntil(() => _rigidbody.velocity.magnitude < 4f);
         _isDash = false;

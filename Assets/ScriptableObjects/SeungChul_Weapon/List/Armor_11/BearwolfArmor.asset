@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: "\uBCA0\uC5B4\uC6B8\uD504\uC758 \uAC00\uC8FD\uC637"
   itemtype: 3
   itemgrade: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -1652788160, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
   atk: 0
   hp: 0
   def: 5

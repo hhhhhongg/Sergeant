@@ -8,4 +8,5 @@ public class UserData : ScriptableObject
     public int atk;
     public int def;
     public int spd;
+    public int hp;
 }

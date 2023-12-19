@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
@@ -18,11 +19,13 @@ public class TopDownMovement : MonoBehaviour
     float Dashreload = 1f;
     float DashTime = 1f;
 
+
     private void Awake() 
     {
         _controller = GetComponent<TopDownCharactreController>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _stats = GetComponent<CharacterStatsHandler>();
+
     }
 
     private void Start() 

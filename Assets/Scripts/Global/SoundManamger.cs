@@ -43,4 +43,23 @@ public class SoundManager : MonoBehaviour
         SoundSource soundSource = obj.GetComponent<SoundSource>();
         soundSource.Play(clip, instance.soundEffectVolume, instance.soundEffectPitchVariance);
     }
+    public float GetBGM_Volume()
+    {
+        return musicVolume;
+    }
+    public float GetSFX_Volume()
+    {
+        return soundEffectVolume;
+    }
+
+
+    public void SetSFX_Volume(float value)
+    {
+        soundEffectVolume = value;
+    }
+    public void SetBGM_Volume(float value)
+    {
+        musicVolume = value;
+        musicAudioSource.volume = value;        
+    }
 }

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private HealthSystem playerHealthSystem;
 
     //[SerializeField] private TextMeshProUGUI waveText;
-    //[SerializeField] private Slider hpGaugeSlider;
+    [SerializeField] private Slider hpGaugeSlider;
     //[SerializeField] private GameObject gameOverUI;
     [SerializeField] private CharacterStats defaultStats;
     [SerializeField] private CharacterStats rangedStats;
@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        //hpGaugeSlider.value = playerHealthSystem.CurrentHealth / playerHealthSystem.MaxHealth;
+        hpGaugeSlider.value = playerHealthSystem.CurrentHealth / playerHealthSystem.MaxHealth;
     }
 
     private void GameOver()

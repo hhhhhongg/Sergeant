@@ -24,6 +24,11 @@ public class ProjectileManager : MonoBehaviour
     {
         GameObject obj = objectPool.SpawnFromPool(attackData.bulletNameTag);
 
+        Debug.Log(obj);
+        if(obj == null)
+        {
+            Debug.Log("obj Null!!!!!!!");
+        }
         obj.transform.position = startPosition;
         RangedAttackController attackController = obj.GetComponent<RangedAttackController>();
         attackController.InitializeAttack(direction, attackData, this);

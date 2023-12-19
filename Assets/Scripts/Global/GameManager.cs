@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
 
     private HealthSystem playerHealthSystem;
 
-    [SerializeField] private TextMeshProUGUI waveText;
-    [SerializeField] private Slider hpGaugeSlider;
-    [SerializeField] private GameObject gameOverUI;
+    //[SerializeField] private TextMeshProUGUI waveText;
+    //[SerializeField] private Slider hpGaugeSlider;
+    //[SerializeField] private GameObject gameOverUI;
     [SerializeField] private CharacterStats defaultStats;
     [SerializeField] private CharacterStats rangedStats;
 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public float spawnInterval = 0.5f;
     public List<GameObject> enemyPrefebs = new List<GameObject>();
 
-    [SerializeField] private Transform spawnPositionsRoot;
+    //[SerializeField] private Transform spawnPositionsRoot;
     private List<Transform> spawnPostions = new List<Transform>();
 
     public List<GameObject> rewards = new List<GameObject>();
@@ -42,12 +42,13 @@ public class GameManager : MonoBehaviour
         playerHealthSystem.OnHeal += UpdateHealthUI;
         playerHealthSystem.OnDeath += GameOver;
 
-        gameOverUI.SetActive(false);
-
+        //gameOverUI.SetActive(false);
+        /*
         for(int i = 0; i < spawnPositionsRoot.childCount; i++)
         {
             spawnPostions.Add(spawnPositionsRoot.GetChild(i));
         }
+        */
         
     }
 
@@ -108,11 +109,13 @@ public class GameManager : MonoBehaviour
     }
     void CreateReward()
     {
+        /*
         int idx = Random.Range(0, rewards.Count);
         int posIdx = Random.Range(0, spawnPostions.Count);
 
         GameObject obj = rewards[idx];
         Instantiate(obj, spawnPostions[posIdx].position, Quaternion.identity);
+        */
     }
     void UpgradeStatInit()
     {
@@ -165,18 +168,18 @@ public class GameManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        hpGaugeSlider.value = playerHealthSystem.CurrentHealth / playerHealthSystem.MaxHealth;
+        //hpGaugeSlider.value = playerHealthSystem.CurrentHealth / playerHealthSystem.MaxHealth;
     }
 
     private void GameOver()
     {
-        gameOverUI.SetActive(true);
+        //gameOverUI.SetActive(true);
         StopAllCoroutines();
     }
 
     private void UpdateWaveUI()
     {
-        waveText.text = (currentWaveIndex + 1).ToString();
+        //waveText.text = (currentWaveIndex + 1).ToString();
     }
 
     public void RestartGame()

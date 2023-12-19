@@ -12,6 +12,7 @@ public class ItemStats : ScriptableObject
     public ItemType itemtype;       // 아이템 타입
     public ItemGrade itemgrade; // 아이템 등급
     public Sprite itemImage;         // 아이템 이미지
+    public bool isEquips;        // 장착 여부
 
     [Header("Item Stats")]
     public int atk;     // 공격력

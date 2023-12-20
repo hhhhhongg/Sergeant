@@ -7,7 +7,7 @@ using UnityEngine;
 public class InventoryUIManager : MonoBehaviour
 {
     public static InventoryUIManager instance;
-    public ItemSlot[] itemslots;
+    public List<ItemSlot> itemslots;
     public TMP_Text atk;
     public TMP_Text def;
     public TMP_Text spd;

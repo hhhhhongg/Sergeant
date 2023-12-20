@@ -25,6 +25,8 @@ public class DungeonUIManager : MonoBehaviour
     public void PlayerWin()
     {
         ActiveWinPanel();
+        DataManager.instance.userData.gold += 1000;
+        GoldManager.instance.SetGold();
     }
 
     public void ReturnToVillage()

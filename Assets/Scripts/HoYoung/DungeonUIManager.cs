@@ -31,6 +31,7 @@ public class DungeonUIManager : MonoBehaviour
 
     public void ReturnToVillage()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("VillageScene");
     }
 

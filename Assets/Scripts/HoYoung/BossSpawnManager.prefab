@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &371457034483330112
 MonoBehaviour:
@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossList:
-  - {fileID: 8495936068222883314, guid: 9bfc7328974553243b8010a9a498ca25, type: 3}
+  - {fileID: 2611224624483570690, guid: c301496f6fe31444bbf2d61eef5035ed, type: 3}

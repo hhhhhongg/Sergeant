@@ -21,7 +21,8 @@ public class Shild : MonoBehaviour
         }
         else
         {
-            Collider.enabled=false;
+            Collider.enabled = false;
         }
     }
+
 }

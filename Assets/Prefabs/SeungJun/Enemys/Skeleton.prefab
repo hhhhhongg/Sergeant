@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8661637799490388606}
   m_Layer: 6
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,10 +127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 3
+    maxHealth: 30
+    def: 0
     speed: 2
     dashSpeed: 0
-    attackSO: {fileID: 11400000, guid: 0ba9f54933ee9af49b7fda86cb20e2fd, type: 2}
+    attackSO: {fileID: 11400000, guid: 87d35e4c53231a745aa1b771fe240af4, type: 2}
   statsModifiers: []
 --- !u!114 &4518382002320237703
 MonoBehaviour:
@@ -144,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef86138723f34864296db83c98f93b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDash: 0
 --- !u!114 &8967749865369760342
 MonoBehaviour:
   m_ObjectHideFlags: 0

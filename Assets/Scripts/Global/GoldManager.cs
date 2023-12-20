@@ -18,6 +18,11 @@ public class GoldManager : MonoBehaviour
         SetGold();
     }
 
+    private void Update()
+    {
+        SetGold();
+    }
+
     public void SetGold()
     {
         gold.text = DataManager.instance.userData.gold.ToString();

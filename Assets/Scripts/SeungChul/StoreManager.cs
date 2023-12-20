@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class StoreManager : MonoBehaviour
 {
-    UserData userdata;
+    public InventoryData inventoryData;
+
+    public int selectItemIndex = 0;
+    
     public TMP_Text userMoney;
     int buyMoney = 0;
 
@@ -24,6 +27,10 @@ public class StoreManager : MonoBehaviour
     public TMP_Text infoItem_def;
     public TMP_Text infoItem_spd;
     public TMP_Text infoItem_hp;
+
+
+    public GameObject _Omoney;
+    public GameObject _Xmoney;
 
     private void Start()
     {
@@ -64,16 +71,61 @@ public class StoreManager : MonoBehaviour
         infoItem_def.text = itemStats[itemIndex].def.ToString();
         infoItem_spd.text = itemStats[itemIndex].spd.ToString();
         infoItem_hp.text = itemStats[itemIndex].hp.ToString();
+
+        selectItemIndex = itemIndex;
     }
 
     public void BuyItem()
     {
+        int userM = int.Parse(userMoney.text);
+
         // 선택한 아이템 가격
         buyMoney = int.Parse(infoItem_price.text);
         // 아이템 계산
-        userMoney.text = (int.Parse(userMoney.text) - buyMoney).ToString();
+        if(userM < buyMoney)
+        {
+            print("소지금이 부족합니다!");
+            _Xmoney.SetActive(true);
+        }
+        else if(userM >= buyMoney)
+        {
+            userMoney.text = (userM - buyMoney).ToString();
+            Additem(itemStats[selectItemIndex]);
+            _Omoney.SetActive(false);
+            print("구매 완료");
+        }
         // 데이터 바꾸기
         DataManager.instance.userData.gold = int.Parse(userMoney.text);
+
+    }
+
+    // 인벤토리 추가
+    void Additem(ItemStats item)
+    {
+        // inventoryData에 데이터가 있는 지 확인
+        if(inventoryData != null)
+        {
+            //if(inventoryData.myItems == null)
+            //{
+            //    // 배열이 존재하지 않으면 새로운 배열을 생성
+            //    inventoryData.myItems =
+            //    print("dd");
+            //}
+            //else
+            //{
+            //    // myItems에 배열이 존재한다면 기본 배열에 아이템을 추가
+            //    List<ItemStats> itemList = new List<ItemStats>(inventoryData.myItems);
+            //    itemList.Add(item);
+            //    //inventoryData.myItems = itemList.ToArray();
+            //    print("aa");
+                DataManager.instance.inventoryData.myItems.Add(item);
+            //}
+
+        }
+        else
+        {   
+            print("멸망");
+        }
     }
 }
 

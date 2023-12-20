@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TestInventoryData
   m_EditorClassIdentifier: 
   myItems:
+  - {fileID: 11400000, guid: ba210dcc9d9bf084f80f435b16e09207, type: 2}
   - {fileID: 11400000, guid: 41ebac85d3d56dc44966b0919078cc0c, type: 2}
   - {fileID: 11400000, guid: 9ee752c60f437fa4fbe0b041cf87afcb, type: 2}
-  - {fileID: 11400000, guid: ba210dcc9d9bf084f80f435b16e09207, type: 2}

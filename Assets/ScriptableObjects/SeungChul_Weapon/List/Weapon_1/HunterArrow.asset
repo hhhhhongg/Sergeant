@@ -17,6 +17,8 @@ MonoBehaviour:
   itemtype: 1
   itemgrade: 0
   itemImage: {fileID: 1392263336, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  isEquips: 0
+  price: 1100
   atk: 7
   hp: 0
   def: 0

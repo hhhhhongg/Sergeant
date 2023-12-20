@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,11 @@ public class DungeonCameraCollider : MonoBehaviour
 
     private static List<CameraChangeEvent> CameraHandlers = new List<CameraChangeEvent>();
 
-
+    //private CameraChangeEvent TestEvent;
+    private void Start()
+    {
+        //TestEvent += DungeonCameraController.instance.HandleCameraEvent;
+    }
     public static void AddEventHandler(CameraChangeEvent handler)
     {
         CameraHandlers.Add(handler);
@@ -36,6 +41,7 @@ public class DungeonCameraCollider : MonoBehaviour
             {
                 handler(roomVector);
             }
+            //TestEvent(roomVector);
         }
     }
 }

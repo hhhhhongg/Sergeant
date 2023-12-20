@@ -22,6 +22,20 @@ public class HealthSystem : MonoBehaviour
 
     public float MaxHealth => _statsHandler.CurrentStats.maxHealth;
 
+    // 이벤트
+    public delegate void PlayerWin();
+    public static event PlayerWin PlayerWinEvent;
+    private static List<PlayerWin> PlayerWinHandlers = new List<PlayerWin>();
+
+    public static void AddEventHandler(PlayerWin handler)
+    {
+        PlayerWinHandlers.Add(handler);
+    }
+    public static void RemoveEventHandler(PlayerWin handler)
+    {
+        PlayerWinHandlers.Remove(handler);
+    }
+    //이벤트 끝
     private void Awake()
     {
         _statsHandler = GetComponent<CharacterStatsHandler>();
@@ -72,14 +86,23 @@ public class HealthSystem : MonoBehaviour
 
         if (CurrentHealth <= 0f)
         {
+            if(gameObject.tag == "Boss")
+            {
+                Debug.Log("Boss is dead!!!!!");
+                foreach (var handler in PlayerWinHandlers)
+                {
+                    handler();
+                }
+            }
+            
             CallDeath();
         }
-
         return true;
     }
 
     private void CallDeath()
     {
+        
         OnDeath?.Invoke();
     }
 }

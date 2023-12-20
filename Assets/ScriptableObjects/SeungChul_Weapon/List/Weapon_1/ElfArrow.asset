@@ -15,8 +15,10 @@ MonoBehaviour:
   id: 3
   itemName: "\uC5D8\uD504\uC758 \uD65C"
   itemtype: 1
-  itemgrade: 1
+  itemgrade: 2
   itemImage: {fileID: 1238930438, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  isEquips: 0
+  price: 5000
   atk: 11
   hp: 0
   def: 0

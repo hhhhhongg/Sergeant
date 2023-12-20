@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CharacterStatsHandler : MonoBehaviour
 {
+    public static CharacterStatsHandler instance;
     [SerializeField] private CharacterStats baseStats;
     public CharacterStats CurrentStats { get; private set; }
     public List<CharacterStats> statsModifiers = new List<CharacterStats>();
@@ -21,7 +22,12 @@ public class CharacterStatsHandler : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         UpdateCharacterStats();
+    }
+    private void Start()
+    {
+        SetCharacterStats();
     }
     public void AddStatModifier(CharacterStats statModifier)
     {
@@ -152,6 +158,17 @@ public class CharacterStatsHandler : MonoBehaviour
         LimitStats(ref CurrentStats.attackSO.speed, MinAttackSpeed);
         LimitStats(ref CurrentStats.speed, MinSpeed);
         CurrentStats.maxHealth = Mathf.Max(CurrentStats.maxHealth, MinMaxHealth);
+    }
+
+    public void SetCharacterStats()
+    {
+        if(gameObject.tag == "Player")
+        {
+            baseStats.attackSO.power = DataManager.instance.userData.atk;
+            baseStats.def = DataManager.instance.userData.def;
+            baseStats.speed = DataManager.instance.userData.spd;
+            baseStats.maxHealth = DataManager.instance.userData.hp;
+        }
     }
 }
 

@@ -27,7 +27,7 @@ public class StoreManager : MonoBehaviour
 
     private void Start()
     {
-        userMoney.text = GoldManager.instance.gold.text;
+        //userMoney.text = DataManager.instance.userData.gold.ToString();
 
         DisplayItems();
     }
@@ -73,7 +73,7 @@ public class StoreManager : MonoBehaviour
         // 아이템 계산
         userMoney.text = (int.Parse(userMoney.text) - buyMoney).ToString();
         // 데이터 바꾸기
-        GoldManager.instance.gold.text = userMoney.text;
+        DataManager.instance.userData.gold = int.Parse(userMoney.text);
     }
 }
 

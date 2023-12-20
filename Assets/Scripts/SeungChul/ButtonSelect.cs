@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class ButtonSelect : MonoBehaviour
 {
     public TMP_Text startTxt;
@@ -44,5 +45,10 @@ public class ButtonSelect : MonoBehaviour
             exitTxt.color = select;
             Application.Quit();
         }
+    }
+
+    public void GameStartButton()
+    {
+        SceneManager.LoadScene("VillageScene");
     }
 }

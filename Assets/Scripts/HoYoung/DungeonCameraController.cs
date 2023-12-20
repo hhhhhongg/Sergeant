@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class DungeonCameraController : MonoBehaviour
 {
-    public GameObject MCamera;
+    public GameObject cameraFollowingOBJ;
+    public GameObject MiniMapCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class DungeonCameraController : MonoBehaviour
     public void HandleCameraEvent(Vector2 vector)
     {
         Debug.Log($"Camera Position : {vector}");
-        MCamera.transform.position = new Vector3(vector.x, vector.y, -10);
+        cameraFollowingOBJ.transform.position = new Vector3(vector.x, vector.y, -10);
+        MiniMapCamera.transform.position = new Vector3(vector.x, vector.y, MiniMapCamera.transform.position.z);
     }
 }

@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "myItems", menuName = "TopDownController/InventoryData", order = 2)]
 public class InventoryData : ScriptableObject
 {
-    public ItemStats[] myItems;
+    public List<ItemStats> myItems;
 }

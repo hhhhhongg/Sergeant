@@ -20,7 +20,7 @@ public class InventoryUIManager : MonoBehaviour
     }
     public void SetInventory()
     {
-        for (int i = 0; i < DataManager.instance.inventoryData.myItems.Length; i++)
+        for (int i = 0; i < DataManager.instance.inventoryData.myItems.Count; i++)
         {
             itemslots[i].Init(DataManager.instance.inventoryData.myItems[i]);
         }

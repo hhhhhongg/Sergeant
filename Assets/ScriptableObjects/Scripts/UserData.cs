@@ -9,4 +9,5 @@ public class UserData : ScriptableObject
     public int def;
     public int spd;
     public int hp;
+    public int gold;
 }

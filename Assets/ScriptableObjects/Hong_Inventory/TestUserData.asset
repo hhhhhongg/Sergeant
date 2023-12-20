@@ -16,3 +16,4 @@ MonoBehaviour:
   def: 12
   spd: 5
   hp: 15
+  gold: 1000

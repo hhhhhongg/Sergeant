@@ -9,7 +9,7 @@ public class Boss : MonoBehaviour
 
     public delegate void PlayerWin();
 
-    public static event PlayerWin ChangeCameraPosition;
+    public static event PlayerWin PlayerWinEvent;
 
     private static List<PlayerWin> PlayerWinHandlers = new List<PlayerWin>();
 

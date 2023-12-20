@@ -273,10 +273,9 @@ GameObject:
   - component: {fileID: 268404156502711994}
   - component: {fileID: 6176520656420656141}
   - component: {fileID: 6893534015782798231}
-  - component: {fileID: 6743876812744103567}
   m_Layer: 6
   m_Name: Orc_Shaman (boss Test)
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,30 +483,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58466012c378c924582fe767c0bae586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6743876812744103567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8495936068222883314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e57fc71ea28d948bbab9e0d3ab5388, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerWin:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: ae80c2504e5be0841af60445f25a6a6f, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 1
   delay: 0.15
-  power: 1
+  power: 2
   speed: 5
+  dashSpeed: 0
   target:
     serializedVersion: 2
     m_Bits: 256

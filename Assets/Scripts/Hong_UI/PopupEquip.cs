@@ -29,6 +29,7 @@ public class PopupEquip : MonoBehaviour
                     slot.inputData.isEquips = false;
                     slot.ChangeEquip();
                     InventoryUIManager.instance.SubCharacterStat(slot.inputData.atk, slot.inputData.def, slot.inputData.spd, slot.inputData.hp);
+                    CharacterStatsHandler.instance.SetCharacterStats();
                 });
             }
             else
@@ -40,6 +41,7 @@ public class PopupEquip : MonoBehaviour
                     slot.inputData.isEquips = true;
                     slot.ChangeEquip();
                     InventoryUIManager.instance.SumCharacterStat(slot.inputData.atk, slot.inputData.def, slot.inputData.spd, slot.inputData.hp);
+                    CharacterStatsHandler.instance.SetCharacterStats();
                 });
             }
         }

@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossList:
-  - {fileID: 8495936068222883314, guid: f998bb2166538204a895bbea2a48d5f6, type: 3}
+  - {fileID: 8495936068222883314, guid: 9bfc7328974553243b8010a9a498ca25, type: 3}

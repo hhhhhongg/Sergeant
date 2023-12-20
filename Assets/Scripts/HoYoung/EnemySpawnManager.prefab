@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefebs:
-  - {fileID: 5960051017858285727, guid: c7e13e795f995c44184594bb148d0af6, type: 3}
+  - {fileID: 8877875152398160728, guid: 77d1c15c71c64344d8af9ce558960b12, type: 3}
+  - {fileID: 7208165074370991360, guid: a7e69a060d389f742b2bd8025e3788ba, type: 3}

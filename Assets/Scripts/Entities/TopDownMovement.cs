@@ -15,7 +15,7 @@ public class TopDownMovement : MonoBehaviour
     private Vector2 _knockback = Vector2.zero;
     private float knockBackDuration = 0f;
 
-    bool _isDash = false;
+    public bool _isDash = false;
     float Dashreload = 1f;
     float DashTime = 1f;
 

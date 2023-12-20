@@ -27,7 +27,7 @@ public class StoreManager : MonoBehaviour
 
     private void Start()
     {
-        //userMoney.text = DataManager.instance.userData.gold.ToString();
+        userMoney.text = DataManager.instance.userData.gold.ToString();
 
         DisplayItems();
     }

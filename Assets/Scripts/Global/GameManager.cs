@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public SoundManager SM;
 
     public Transform player { get; private set; }
     [SerializeField] private string playerTag = "Player";

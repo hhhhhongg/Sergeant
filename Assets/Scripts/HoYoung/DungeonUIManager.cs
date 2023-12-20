@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DungeonUIManager : MonoBehaviour
 {
     public GameObject WinPanel;
+    public SoundManager SM;
     public Button WinPanel_Rty;
     public Button WinPanel_End;
     public Button LosePanel_Rty;

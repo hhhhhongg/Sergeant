@@ -442,8 +442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 876, y: 468}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 811.208, y: 468}
+  m_SizeDelta: {x: 189.584, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179692990
 MonoBehaviour:
@@ -777,6 +777,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262591295}
   m_CullTransparentMesh: 1
+--- !u!114 &293364629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5229564851538852454, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+  m_PrefabInstance: {fileID: 1032887077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624c5c0b84d7c7e4f9c55a7d64d0577b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &296209108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,6 +796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1799424337310522856, guid: ae48dde5c21d9ef4e8e545a948da96e7, type: 3}
+      propertyPath: SM
+      value: 
+      objectReference: {fileID: 293364629}
     - target: {fileID: 1799424337310522856, guid: ae48dde5c21d9ef4e8e545a948da96e7, type: 3}
       propertyPath: gameOverUI
       value: 
@@ -842,7 +857,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2747121035621536350, guid: ae48dde5c21d9ef4e8e545a948da96e7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae48dde5c21d9ef4e8e545a948da96e7, type: 3}
@@ -1616,6 +1632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinPanel: {fileID: 1605850773}
+  SM: {fileID: 293364629}
   WinPanel_Rty: {fileID: 1377574229}
   WinPanel_End: {fileID: 2023589267}
   LosePanel_Rty: {fileID: 1959239197}
@@ -2772,6 +2789,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4813479646835714521, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4854592442148795359, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2816,6 +2837,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229564851538852454, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+      propertyPath: musicClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229564851538852454, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+      propertyPath: musicClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b53f8ec25da5d74a9153e4ead01ac8b, type: 3}
+    - target: {fileID: 5229564851538852454, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+      propertyPath: musicClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52f6060787db31440b90259b86b3cb7e, type: 3}
     - target: {fileID: 6201019602053926637, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -4635,10 +4668,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@'
+  m_text: Setting
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ea925299fe5de545b3ae0a2ae924e2d, type: 2}
+  m_sharedMaterial: {fileID: -8941047154709257116, guid: 1ea925299fe5de545b3ae0a2ae924e2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4978,6 +5011,18 @@ PrefabInstance:
     - target: {fileID: 2815818212861670556, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

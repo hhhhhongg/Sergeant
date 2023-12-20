@@ -1401,6 +1401,18 @@ PrefabInstance:
       value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179144390500601778, guid: 13be847f5b1c01d4b8ca89673127df42, type: 3}
       propertyPath: InheritVelocityModule.m_Curve.scalar
       value: 10
       objectReference: {fileID: 0}
@@ -3089,6 +3101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6075627236970219039, guid: e5cee00f3d1425b47bd56eef2f191c39, type: 3}
+      propertyPath: shootingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 52f6060787db31440b90259b86b3cb7e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28213,6 +28229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229564851538852454, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
+      propertyPath: musicClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 14eba9c3c7febf24f8ba93bfa2037507, type: 3}
     - target: {fileID: 6201019602053926637, guid: e1b613228fb09d04cb0c1c7f5917ac48, type: 3}
       propertyPath: m_Name
       value: SoundManager

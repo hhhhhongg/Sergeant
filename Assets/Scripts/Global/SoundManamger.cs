@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
     private ObjectPool objectPool;
 
     private AudioSource musicAudioSource;
-    public AudioClip musicClip;
+    public List<AudioClip> musicClips = new List<AudioClip> { };
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        ChangeBackGroundMusic(musicClip);
+        ChangeBackGroundMusic(musicClips[0]);
     }
 
     public static void ChangeBackGroundMusic(AudioClip music)
@@ -34,6 +34,11 @@ public class SoundManager : MonoBehaviour
         instance.musicAudioSource.Stop();
         instance.musicAudioSource.clip = music;
         instance.musicAudioSource.Play();
+    }
+
+    public void PlayerLoseMusic()
+    {
+        ChangeBackGroundMusic(musicClips[1]);
     }
 
     public static void PlayClip(AudioClip clip)

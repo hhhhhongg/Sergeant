@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class StoreManager : MonoBehaviour
 {
+    UserData userdata;
     public TMP_Text userMoney;
+    int buyMoney = 0;
 
     public ItemStats[] itemStats;
-
+    
     public Image[] image;   // 아이템 이미지
     public TMP_Text[] itemName;   // 아이템 이름
     public TMP_Text[] itemPrice;    // 아이템 가격
@@ -25,7 +27,7 @@ public class StoreManager : MonoBehaviour
 
     private void Start()
     {
-        // userMoney.text = Player에 소지금을 불러온다.
+        userMoney.text = GoldManager.instance.gold.text;
 
         DisplayItems();
     }
@@ -64,10 +66,14 @@ public class StoreManager : MonoBehaviour
         infoItem_hp.text = itemStats[itemIndex].hp.ToString();
     }
 
-    void BuyItem()
+    public void BuyItem()
     {
-        // 구매
-        // PlayerMoney.Text = 
+        // 선택한 아이템 가격
+        buyMoney = int.Parse(infoItem_price.text);
+        // 아이템 계산
+        userMoney.text = (int.Parse(userMoney.text) - buyMoney).ToString();
+        // 데이터 바꾸기
+        GoldManager.instance.gold.text = userMoney.text;
     }
 }
 

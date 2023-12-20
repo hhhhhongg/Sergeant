@@ -27,7 +27,7 @@ public class StoreManager : MonoBehaviour
 
     private void Start()
     {
-        //userMoney.text = DataManager.instance.userData.gold.ToString();
+        userMoney.text = DataManager.instance.userData.gold.ToString();
 
         DisplayItems();
     }
@@ -68,10 +68,19 @@ public class StoreManager : MonoBehaviour
 
     public void BuyItem()
     {
+        int userM = int.Parse(userMoney.text);
+
         // 선택한 아이템 가격
         buyMoney = int.Parse(infoItem_price.text);
         // 아이템 계산
-        userMoney.text = (int.Parse(userMoney.text) - buyMoney).ToString();
+        if(userM < 0)
+        {
+            // 소지금이 부족합니다!
+        }
+        else if(userM > 0)
+        {
+            userMoney.text = (int.Parse(userMoney.text) - buyMoney).ToString();
+        }
         // 데이터 바꾸기
         DataManager.instance.userData.gold = int.Parse(userMoney.text);
     }

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     //[SerializeField] private TextMeshProUGUI waveText;
     [SerializeField] private Slider hpGaugeSlider;
-    //[SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject gameOverUI;
     [SerializeField] private CharacterStats defaultStats;
     [SerializeField] private CharacterStats rangedStats;
 
@@ -42,13 +42,13 @@ public class GameManager : MonoBehaviour
         playerHealthSystem.OnHeal += UpdateHealthUI;
         playerHealthSystem.OnDeath += GameOver;
 
-        //gameOverUI.SetActive(false);
-        /*
-        for(int i = 0; i < spawnPositionsRoot.childCount; i++)
+        gameOverUI.SetActive(false);
+        
+        /*for(int i = 0; i < spawnPositionsRoot.childCount; i++)
         {
             spawnPostions.Add(spawnPositionsRoot.GetChild(i));
-        }
-        */
+        }*/
+        
         
     }
 
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        //gameOverUI.SetActive(true);
+        gameOverUI.SetActive(true);
         StopAllCoroutines();
     }
 

@@ -14,9 +14,18 @@ public class StoreManager : MonoBehaviour
     public TMP_Text[] itemName;   // 아이템 이름
     public TMP_Text[] itemPrice;    // 아이템 가격
 
+    public Image infoItem_Image;
+    public TMP_Text infoItem_name;
+    public TMP_Text infoItem_explan;
+    public TMP_Text infoItem_price;
+    public TMP_Text infoItem_atk;
+    public TMP_Text infoItem_def;
+    public TMP_Text infoItem_spd;
+    public TMP_Text infoItem_hp;
+
     private void Start()
     {
-        // userMoney = Player에 소지금을 불러온다.
+        // userMoney.text = Player에 소지금을 불러온다.
 
         DisplayItems();
     }
@@ -27,21 +36,38 @@ public class StoreManager : MonoBehaviour
         {
             for( int i = 0; i < image.Length; i++)
             {
-                itemIconView(image[i], itemStats[i], itemName[i], itemPrice[i]);
+                image[i].sprite = itemStats[i].itemImage;
+                itemName[i].text = itemStats[i].itemName;
+                itemPrice[i].text = itemStats[i].price.ToString();
+
+                Button btn = image[i].GetComponent<Button>();
+                int index = i;
+                btn.onClick.AddListener(() => OnButtonClick(index));
             }
         }
     }
 
-    void itemIconView(Image icon, ItemStats item, TMP_Text name, TMP_Text price)
+    void OnButtonClick(int itemIndex)
     {
-        if(item != null && icon != null)
-        {
-            icon.sprite = item.itemImage;
+        // 이미지를 눌렀을 때 구매하려는 아이템으 정보를 표시
 
-            name.text = item.itemName;
-            price.text = item.price.ToString();
-            
-        }
+        // 데이터 받아오기
+        Debug.Log("클릭한 아이템: " + itemIndex);
+
+        infoItem_Image.sprite = itemStats[itemIndex].itemImage;
+        infoItem_name.text = itemStats[itemIndex].itemName;
+        infoItem_explan.text = itemStats[itemIndex].explan;
+        infoItem_price.text = itemStats[itemIndex].price.ToString();
+        infoItem_atk.text = itemStats[itemIndex].atk.ToString();
+        infoItem_def.text = itemStats[itemIndex].def.ToString();
+        infoItem_spd.text = itemStats[itemIndex].spd.ToString();
+        infoItem_hp.text = itemStats[itemIndex].hp.ToString();
+    }
+
+    void BuyItem()
+    {
+        // 구매
+        // PlayerMoney.Text = 
     }
 }
 
